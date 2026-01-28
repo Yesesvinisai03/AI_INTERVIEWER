@@ -1,0 +1,17 @@
+Project Name: "AI Interviewer"
+Employee Name: "<YourEmpID>"
+models_used:
+  - llama-3.1-8b-instant
+  - llama-4-scout-17b
+data:
+  - synthetic
+tools:
+  - langgraph
+  - streamlit
+  - chromadb
+evaluation:
+  - automated
+  - human
+compute:
+  platform: cloud
+  gpu: none

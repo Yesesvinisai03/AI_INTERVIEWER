@@ -1,0 +1,12 @@
+streamlit
+langgraph
+chromadb
+sentence-transformers
+groq
+python-dotenv
+pydantic
+pdfplumber
+python-docx
+Pillow
+matplotlib
+numpy
