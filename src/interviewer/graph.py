@@ -1769,7 +1769,6 @@ def closing_step(state: InterviewState) -> InterviewState:
         )
         return state
 
-
     # Answer user question and allow more questions
     reply = llm.invoke_text(f"Answer briefly and clearly as an interviewer:\n{user_msg}")
     state.history.append(Turn(speaker="agent", text=reply))
