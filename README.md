@@ -1,6 +1,15 @@
-# AI Interviewer – Adaptive LLM-Driven Interview System
+---
+title: AI INTERVIEWER
+emoji: 🐢
+colorFrom: gray
+colorTo: gray
+sdk: docker
+pinned: false
+license: mit
+short_description: interviewing agent
+---
 
-
+# AI Interviewer – Adaptive LLM-Driven Interview System 🤖
 
 ---
 
@@ -72,7 +81,7 @@ Candidate
 → Evaluation Engine  
 → Feedback + Learning Plan
 
-
+---
 
 ## 5. Interview Flow
 
@@ -98,11 +107,10 @@ The interview consists of **exactly three rounds**:
 
 ## 6. Models Used
 
-
-Text generation & evaluation - llama-3.1-8b-instant 
-Vision (whiteboard analysis) - meta-llama/llama-4-scout-17b-16e-instruct 
-Text fallback - mistralai/Mistral-7B-Instruct-v0.2 
-Embeddings - all-MiniLM-L6-v2 
+- **Text generation & evaluation:** llama-3.1-8b-instant  
+- **Vision (whiteboard analysis):** meta-llama/llama-4-scout-17b-16e-instruct  
+- **Text fallback:** mistralai/Mistral-7B-Instruct-v0.2  
+- **Embeddings:** all-MiniLM-L6-v2  
 
 ---
 
@@ -141,7 +149,6 @@ Scoring rules:
 - Whiteboard vision improves explanation quality
 - Learning plans provide actionable improvement steps
 
-
 ---
 
 ## 10. Limitations and Ethical Considerations
@@ -150,7 +157,3 @@ Scoring rules:
 - Language bias may affect interpretation
 - Not suitable for high-stakes hiring without human oversight
 - Usage of AI tools must be disclosed to candidates
-
----
-
-
