@@ -10,12 +10,16 @@ def extract_resume_text(uploaded_file) -> str:
 
     if name.endswith(".pdf"):
         text = []
-        with pdfplumber.open(BytesIO(uploaded_file.read())) as pdf:
+        file_bytes = uploaded_file.getvalue()
+
+        with pdfplumber.open(BytesIO(file_bytes)) as pdf:
             for p in pdf.pages:
                 t = p.extract_text()
                 if t:
                     text.append(t)
+
         return "\n".join(text)
+
 
     if name.endswith(".docx"):
         doc = docx.Document(BytesIO(uploaded_file.read()))
