@@ -1,3 +1,16 @@
+---
+title: AI Interviewer (RAG + Whiteboard)
+emoji: 🤖
+colorFrom: indigo
+colorTo: blue
+sdk: streamlit
+sdk_version: "1.32.0"
+python_version: "3.10"
+app_file: src/app.py
+pinned: false
+---
+
+
 # AI Interviewer (RAG + Whiteboard)
 **Employee Name:** Lanka Yesesvini Sai
 
