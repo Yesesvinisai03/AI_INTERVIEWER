@@ -92,7 +92,8 @@ def render_pie(title: str, data: dict):
     )
 
     # ✅ Correct indentation + new API
-    st.pyplot(fig, width="stretch")
+    st.pyplot(fig, use_container_width=True)  # ✅ correct
+
 
 
 # Generate final interview report as a DOCX file
