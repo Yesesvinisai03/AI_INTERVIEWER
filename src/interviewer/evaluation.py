@@ -179,64 +179,6 @@ def score_round(
     return final_score
 
 
-# Build a detailed plain-text report using evaluated records
-# Includes dimension scores, strengths, and topic breakdown
-def generate_downloadable_report(state) -> str:
-    """
-    Builds the FINAL downloadable interview report,
-    including Final Evaluation paragraph at the end.
-    """
-
-    llm = get_llm()
-
-    result = evaluate_interview(state.records)
-
-    lines = []
-
-    lines.append("Interview Evaluation Report")
-    lines.append("=" * 30)
-    lines.append("")
-
-    lines.append(f"Overall Score: {result['score']}/10")
-    lines.append("")
-
-    lines.append("Dimension Scores:")
-    for d, s in result["dimensions"].items():
-        lines.append(f"- {d.replace('_', ' ').title()}: {s}/10")
-    lines.append("")
-
-    lines.append("Strengths:")
-    if result["strengths"]:
-        for s in result["strengths"]:
-            lines.append(f"- {s}")
-    else:
-        lines.append("- —")
-    lines.append("")
-
-    lines.append("Areas for Improvement:")
-    if result["improvements"]:
-        for i in result["improvements"]:
-            lines.append(f"- {i}")
-    else:
-        lines.append("- —")
-    lines.append("")
-
-    lines.append("Topic Breakdown:")
-    for topic, stats in result["topic_breakdown"].items():
-        lines.append(
-            f"- {topic}: {stats['good']} good, {stats['weak']} weak"
-        )
-    lines.append("")
-
-    # ===== FINAL EVALUATION SECTION =====
-    final_evaluation = generate_final_evaluation_paragraph(llm, state)
-
-    lines.append("Final Evaluation")
-    lines.append("-" * 20)
-    lines.append(final_evaluation)
-
-    return "\n".join(lines)
-
 # Generate final downloadable report using interview state
 # Uses state.final_evaluation as the single source of truth
 def generate_downloadable_report(state) -> str:

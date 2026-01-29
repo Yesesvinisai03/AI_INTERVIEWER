@@ -1,4 +1,11 @@
 # ==================================================
+# 🔒 DISABLE CHROMA TELEMETRY (MUST BE FIRST)
+# ==================================================
+import os
+os.environ["CHROMA_TELEMETRY_ENABLED"] = "false"
+os.environ["ANONYMIZED_TELEMETRY"] = "false"
+
+# ==================================================
 # 🔥 LOAD .env FIRST
 # ==================================================
 from dotenv import load_dotenv

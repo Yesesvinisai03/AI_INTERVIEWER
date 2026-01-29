@@ -1,0 +1,55 @@
+name: personality_based_interview_evaluation
+model: llama-3.1-8b-instant
+provider: groq
+retriever: chromadb
+temperature: 0.7
+seed: 42
+
+personalities:
+  - Friendly Coach
+  - Startup Hiring Manager
+  - Professor
+  - Strict FAANG
+
+evaluation_modes:
+  - text_only
+  - whiteboard_vision
+  - whiteboard_fallback
+
+whiteboard_models:
+  primary:
+    model: meta-llama/llama-3.2-11b-vision-instruct
+    provider: openrouter
+  fallback:
+    model: mistralai/Mistral-7B-Instruct-v0.2
+    provider: huggingface_hub
+
+fixed_inputs:
+  role: Backend Engineer
+  experience_level: Mid
+  resume_context: "Worked on APIs, databases, caching systems"
+  question: "Design a scalable backend system"
+  candidate_answer: >
+    I designed a REST API with authentication and caching.
+    I used JWT for authentication and Redis for caching to reduce latency.
+
+evaluation_dimensions:
+  - technical_depth
+  - clarity
+  - confidence
+  - communication
+  - correctness
+
+description: >
+  This experiment evaluates how interviewer personality affects question
+  generation, evaluation strictness, and feedback across different input
+  modalities, including text-only answers and whiteboard-based explanations.
+
+metric: >
+  Differences in evaluation labels, feedback tone, follow-up questions,
+  and strictness across personalities and evaluation modes.
+
+notes: >
+  Whiteboard vision analysis is executed in the main application.
+  Notebook experiments document whiteboard behavior and fallback logic
+  to ensure reproducibility without external API dependency.
