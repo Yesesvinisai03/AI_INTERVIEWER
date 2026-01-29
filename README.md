@@ -44,6 +44,8 @@ The relevance of this work lies in its practical application to technical hiring
 </p>
 
 
+
+
 ### Architecture Overview
 
 The AI Interviewer system is designed as a modular, state-driven architecture that simulates a real-world technical interview. It integrates resume-aware question generation, multi-round interview orchestration, adaptive evaluation logic, and multimodal whiteboard analysis to produce structured interview feedback and learning recommendations.
