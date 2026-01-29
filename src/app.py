@@ -2,9 +2,9 @@
 # 🔒 DISABLE CHROMA TELEMETRY (MUST BE FIRST)
 # ==================================================
 import os
-os.environ["CHROMA_TELEMETRY_ENABLED"] = "false"
-os.environ["ANONYMIZED_TELEMETRY"] = "false"
-
+os.environ["ANONYMIZED_TELEMETRY"] = "False"
+os.environ["CHROMA_TELEMETRY"] = "False"
+os.environ["STREAMLIT_BROWSER_GATHER_USAGE_STATS"] = "false"
 # ==================================================
 # 🔥 LOAD .env FIRST
 # ==================================================
@@ -92,7 +92,7 @@ def render_pie(title: str, data: dict):
     )
 
     # ✅ Correct indentation + new API
-    st.pyplot(fig, width="content")
+    st.pyplot(fig, width="stretch")
 
 
 # Generate final interview report as a DOCX file
