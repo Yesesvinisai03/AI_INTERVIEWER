@@ -39,10 +39,10 @@ The relevance of this work lies in its practical application to technical hiring
 
 ## 3. System Architecture
 
+
 <p align="center">
   <img src="docs/system_architecture.png" alt="System Architecture Diagram" width="900">
 </p>
-
 
 
 
@@ -293,7 +293,7 @@ These results demonstrate the system’s ability to generate consistent, interpr
 
 ---
 
-10. ## Use of Generative Tools
+## 10. ## Use of Generative Tools
 
 This project makes use of Large Language Models (LLMs) and generative AI tools in the following ways:
 
