@@ -293,7 +293,7 @@ These results demonstrate the system’s ability to generate consistent, interpr
 
 ---
 
-## 10. ## Use of Generative Tools
+## 10. Use of Generative Tools
 
 This project makes use of Large Language Models (LLMs) and generative AI tools in the following ways:
 
